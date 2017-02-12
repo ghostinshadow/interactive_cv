@@ -1,0 +1,6 @@
+%tr{open_layer: open_layer.id}
+  %td.break-word= open_layer.name
+  %td.break-word= open_layer.workspace_name
+  %td.break-word= open_layer.description
+  - if can? :delete , open_layer
+    %td= link_to t('delete'), analyze_open_layer_path(open_layer), remote: true, method: :delete, data: { confirm: t('open_layers.u_sure', name: open_layer.name ) }, class: 'btn btn-sm btn-danger'

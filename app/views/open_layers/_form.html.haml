@@ -1,0 +1,17 @@
+= simple_form_for([:analyze, @layer], remote: true, input_html: { class: 'modal-form' }) do |f|
+  .form-group
+    = f.input :name, as: :text, input_html: { class: 'form-control' , maxlength: 71 }, label: t('open_layers.name')
+    %br
+    = f.input :workspace_name, as: :text, input_html: { class: 'form-control' , maxlength: 51 }, label: t('open_layers.workspace_name')
+    %br
+    = f.input :db_name, as: :text, input_html: { class: 'form-control' , maxlength: 51 }, label: t('open_layers.db_name')
+    %br
+    = f.input :description, as: :text, input_html: { class: 'form-control' , maxlength: 201 }, label: t('open_layers.description')    
+    %br
+    = f.input :shapefile_archive, as: :file, input_html: {class: "form-control"}, label: t('open_layers.shapefile_archive')
+  .form-actions
+    = f.button :submit, t('buttons.create'), class: "btn btn-success"
+    = link_to t('buttons.cancel'), '#', onclick: "$.modal.close()", class: 'btn btn-warning pull-right'
+
+:javascript
+  $(":file").filestyle({buttonText: "#{t('data.pick_file')}", placeholder: "#{t('data.no_file')}"});

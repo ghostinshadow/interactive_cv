@@ -1,0 +1,10 @@
+<% if @layer.errors.any? %>
+  OpenLayer.renderErrors(JSON.parse('<%= raw @layer.errors.to_json %>'));
+<% else %>
+  $.modal.close();
+  $$("datatable").clearAll();
+  var refreshed_data = JSON.parse(<%= raw @layers.to_json %>);
+  $$("datatable").define("data", refreshed_data);
+  $$("datatable").refresh();
+  $('.flashes').html("<%= (j (render('layouts/messages'))) %>");
+<% end %>

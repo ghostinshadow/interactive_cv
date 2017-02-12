@@ -1,0 +1,14 @@
+.projects_table
+  .row#projects_table
+    .col-md-12
+      %table.table
+        %thead
+          %tr
+            %th= t('open_layers.name')
+            %th= t('open_layers.workspace_name')
+            %th= t('open_layers.description')
+            %th
+        %tbody#projects
+          = render @layers
+  .center_pag
+    = paginate @layers

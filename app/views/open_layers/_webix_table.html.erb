@@ -1,0 +1,86 @@
+<style type="text/css">
+    .checked{
+        background:green;
+        width:16px; height:16px; margin-top:3px;
+    }
+    .notchecked{
+        background:orange;
+        width:16px; height:16px; margin-top:3px;
+    }
+</style>
+<script type='text/javascript'>
+  var data;
+  $.get("<%= open_layers_path %>" + ".json")
+    .done(function(response){data = JSON.parse(response)});
+
+  function layer_existence_resolver(obj, common, value){
+    if (value)
+        return "<div class='webix_table_radio checked'></div>";
+    else
+        return "<div class='webix_table_radio notchecked'></div>";
+  };
+
+  var columns = [
+    { id: "name",
+      sort: "string",
+      fillspace: 3,
+      width: 180,
+      header: {
+        text:"<%= t('open_layers.name') %>",
+        css:"center-text"
+      } },
+    { id: "workspace_name",
+      sort: "string",
+      fillspace: 3,
+      width: 180,
+      header: {
+        text:"<%= t('open_layers.workspace_name') %>",
+        css:"center-text"
+      }  },
+    { id: "db_name",
+      sort: "string",
+      fillspace: 3,
+      width: 180,
+      header: {
+        text:"<%= t('open_layers.db_name') %>",
+        css:"center-text"
+      } },
+    { id: "description",
+      sort: "string",
+      fillspace: 3,
+      header: {
+        text:"<%= t('open_layers.description') %>",
+        css:"center-text"
+      } },
+    {
+      id: "exists",
+      header: "",
+      fillspace: 1,
+      template: layer_existence_resolver
+    },
+    { id: "delete",
+      header: "",
+      width: 100,
+      template: "<a href='/analyze/open_layers/#id#' data-method='delete' data-confirm='<%= t('a_u_sure') %>'><%= t('delete') %></a>",
+      css:"center-text" }
+  ];
+
+  webix.ready(function(){
+    var table = webix.ui({
+      view: "datatable",
+      id: "datatable",
+      container: "webix_table",
+      autoheight: true,
+      data: data,
+      columns: columns,
+      fixedRowHeight:false,
+      ready:function(){
+        this.adjustRowHeight("name");
+      },
+      pager:{
+        container: "open_layers_pagination",
+        size: 10
+      }
+    });
+  });
+</script>

@@ -1,0 +1,90 @@
+/*.container{
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+*/
+.layers-control ul {
+  font-weight: bold;
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.layers-control span {
+  font: 12px/1.5 Arial, Helvetica, sans-serif;
+  padding: 5px;
+}
+
+.layers-control {
+  padding-top: 5px;
+  border-radius: 5px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+}
+
+.layers-control {
+  bottom: 21px;
+  top: auto;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+}
+.layers-control-btn {
+  display: inline-block;
+  bottom: 20px;
+  right: 0;
+  position: absolute;
+  border-radius: 0;
+  border: 0;
+  background-color: #333;
+  color: #fff;
+}
+.layers-control-btn:hover,
+.layers-control-btn:focus,
+.layers-control-btn:active  {
+  outline: 0 !important;
+  background-color: #333;
+  color: #fff;
+  box-shadow: none;
+}
+.table tbody tr {
+  height: 1em;
+}
+.table tbody tr.highlight td {
+  background-color: yellow;
+}
+#map {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+}
+#features-container {
+  height: 100%;
+  overflow-y: scroll !important;
+}
+#features {
+  height: inherit;
+  overflow-y: scroll !important;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.drawcursor {
+  cursor: crosshair !important;
+}
+#draw-btn.active {
+  color: #00FF00 !important;
+}
+@media screen and (max-width: 768px) {
+  .map-container {
+    height: 90%;
+  }
+}
