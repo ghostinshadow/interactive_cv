@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require jquery.simplemodal
+//= require bootstrap-filestyle
+//= require webix
 //= require_tree .

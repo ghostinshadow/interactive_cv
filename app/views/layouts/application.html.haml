@@ -7,4 +7,6 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    .container.col-xs-12.col-sm-10.col-sm-offset-1
+      .padding{:style=>"position:relative; padding: 25px;"}
+        = yield

@@ -26,7 +26,7 @@
       fillspace: 3,
       width: 180,
       header: {
-        text:"<%= t('open_layers.name') %>",
+        text:"Layer name",
         css:"center-text"
       } },
     { id: "workspace_name",
@@ -34,7 +34,7 @@
       fillspace: 3,
       width: 180,
       header: {
-        text:"<%= t('open_layers.workspace_name') %>",
+        text:"Workspace name",
         css:"center-text"
       }  },
     { id: "db_name",
@@ -42,14 +42,14 @@
       fillspace: 3,
       width: 180,
       header: {
-        text:"<%= t('open_layers.db_name') %>",
+        text:"Storage name",
         css:"center-text"
       } },
     { id: "description",
       sort: "string",
       fillspace: 3,
       header: {
-        text:"<%= t('open_layers.description') %>",
+        text:"Description",
         css:"center-text"
       } },
     {
@@ -61,7 +61,7 @@
     { id: "delete",
       header: "",
       width: 100,
-      template: "<a href='/analyze/open_layers/#id#' data-method='delete' data-confirm='<%= t('a_u_sure') %>'><%= t('delete') %></a>",
+      template: "<a href='/open_layers/#id#' data-method='delete' data-confirm='Are you sure?'>Delete</a>",
       css:"center-text" }
   ];
 

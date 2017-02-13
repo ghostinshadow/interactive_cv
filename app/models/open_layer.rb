@@ -19,7 +19,8 @@ class OpenLayer < ApplicationRecord
 
   def self.imported_layers
     coordinates = GeoCoordinates.new
-    hash_with_layers_data = Geoserver.fetch_layers(ws: "imported_layers")
+    geoserver = Geoserver.new
+    hash_with_layers_data =  geoserver.fetch_layers(ws: "imported_layers")
     return hash_with_layers_data if hash_with_layers_data[:coordinates].any?
     hash_with_layers_data.merge({coordinates: coordinates.to_a})
   end
@@ -28,13 +29,20 @@ class OpenLayer < ApplicationRecord
     shapefile_archive.path
   end
 
+  def to_layer_data
+    LayerData.new({ ws: workspace_name,
+                    layer_name: name,
+                    db_name: db_name,
+                    file_path: file_for_import_path})
+  end
+
   private
 
   def publish_layer
-    Resque.enqueue(Geoserver, :create_layer, {layer_id: id})
+    Resque.enqueue(GeoserverTask, :create_layer, {layer_id: id})
   end
 
   def delete_layer
-    Resque.enqueue(Geoserver, :destroy_layer, {ws: workspace_name, layer_name: name, db_name: db_name})
+    Resque.enqueue(GeoserverTask, :destroy_layer, {ws: workspace_name, layer_name: name, db_name: db_name})
   end
 end

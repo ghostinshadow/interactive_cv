@@ -33,6 +33,10 @@ gem "haml-rails", "~> 0.9"
 gem 'carrierwave', '~> 1.0'
 gem "resque"
 gem "pry-rails"
+gem "curb"
+gem "pg"
+gem 'rubyzip', '>= 1.0.0'
+gem 'zip-zip'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

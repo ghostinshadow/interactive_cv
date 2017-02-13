@@ -19,7 +19,7 @@ class OpenLayersController < ApplicationController
 
 	def destroy
 		@destroyed = OpenLayer.find(params[:id]).destroy
-		redirect_to analyze_open_layers_path
+		redirect_to open_layers_path
 	end
 
 	private
