@@ -17,4 +17,6 @@
 //= require jquery.simplemodal
 //= require bootstrap-filestyle
 //= require webix
-//= require_tree .
+//= require errors_hendler
+//= require highlight
+//= require controllers/open_layer

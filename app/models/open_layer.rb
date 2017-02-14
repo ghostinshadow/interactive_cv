@@ -5,7 +5,7 @@ class OpenLayer < ApplicationRecord
   validates_length_of :name, maximum: 70
   validates_length_of [:workspace_name, :db_name], maximum: 50
   validates_length_of :description, maximum: 200
-  validates_presence_of :workspace_name, :db_name, :name
+  validates_presence_of :workspace_name, :db_name, :name, message: "can not be blank"
   validates_format_of [:db_name, :workspace_name, :name], with: /\w/
 
   after_save :publish_layer

@@ -14,7 +14,10 @@ class OpenLayersController < ApplicationController
 
 	def create
 		@layer = OpenLayer.create(open_layer_params)
-		flash.now[:notice] = t('open_layers.pending_creation')
+		respond_to do |format|
+			format.html{ redirect_to open_layers_path}
+		  format.js{flash.now[:notice] = t('open_layers.pending_creation')}
+		end
 	end
 
 	def destroy

@@ -1,4 +1,4 @@
-= simple_form_for(@layer, remote: true , authenticity_token: true, input_html: { class: 'modal-form ' }) do |f|
+= simple_form_for(@layer, url: open_layers_path , authenticity_token: true, method: "post", remote: true, input_html: { class: 'modal-form ' }) do |f|
   .form-group
     = f.input :name, as: :string, input_html: { class: 'form-control' , maxlength: 71 }, label: "Layer name"
     = f.input :workspace_name, as: :string, input_html: { class: 'form-control' , maxlength: 51 }, label: "Workspace"
