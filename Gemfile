@@ -37,6 +37,12 @@ gem "curb"
 gem "pg"
 gem 'rubyzip', '>= 1.0.0'
 gem 'zip-zip'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'combine_pdf'
+gem 'will_paginate', '~> 3.1.0'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

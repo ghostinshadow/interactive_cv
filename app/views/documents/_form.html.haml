@@ -1,0 +1,7 @@
+= simple_form_for(@document, url: open_layers_path , authenticity_token: true, method: "post", remote: true, input_html: { class: 'modal-form ' }) do |f|
+  .form-group
+    = f.input :feedback, as: :text, input_html: { class: 'form-control' , maxlength: 201 }, label: "Description"
+    %br
+  .form-actions
+    = f.button :submit, "Create", class: "btn btn-success"
+    = link_to "Cancel", '#', onclick: "$.modal.close()", class: 'btn btn-warning pull-right'

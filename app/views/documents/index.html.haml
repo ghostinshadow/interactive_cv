@@ -1,0 +1,30 @@
+%h1 Documents#index
+%p Find me in app/views/documents/index.html.haml
+%h3
+  = t('building_documents.plural') 
+  = link_to "Add feedback", new_document_path, remote: true, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> #{t('building_documents.add')}"}, class: "btn btn-success pull-right"
+%br
+.row#building_documents_table
+  - if @documents.any?
+    %table.table.table-bordered.table-hover
+      %thead
+        %tr
+          %th= "Description"
+          %th.col-md-1
+          %th.col-md-1
+      %tbody
+        - @documents.each do |document|
+          %tr#break-word
+            %td= document.description
+            %td= link_to t('building_documents.download'), document.pdf_url, target: "_blank", class: 'btn btn-sm btn-info'
+            %td= link_to t('delete'), document_path(document), method: :delete, remote: true, data: { confirm: t('a_u_sure') }, class: 'btn btn-sm btn-danger'
+    .center_pag
+      = will_paginate @documents
+  - else
+    %h3.text-center= "No data"
+
+:javascript
+  $(function(){
+    $('.previous_page').hide();
+    $('.next_page').hide();
+  });
