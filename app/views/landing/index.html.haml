@@ -1,0 +1,91 @@
+%header#myCarousel.carousel.slide
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+  .carousel-inner
+    .item.active
+      .fill{:style => "background-image:url('#{image_url("landing/face_small")}');"}
+      .carousel-caption
+        %h2.light_backgroudn_img= "Problem solver"
+        = image_tag('landing/idea.svg', width: 120, height: 120, class: "panel-box-ico")
+
+    .item
+      .fill{:style => "background-image:url('#{image_url("landing/presentation")}');"}
+      .carousel-caption
+        %h2.mixed_background_img= "Proactive"
+        = image_tag('landing/proactive.svg', width: 120, height: 120, class: "panel-box-ico")
+    .item
+      .fill{:style => "background-image:url('#{image_url("landing/listener")}');"}
+      .carousel-caption
+        %h2.dark_background_img= "Team player"
+        = image_tag('landing/collaboration.svg', width: 120, height: 120, class: "panel-box-ico")
+        
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
+    %span.icon-prev
+  %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
+    %span.icon-next
+
+%section.integrate.panel
+  .panel-container.animated.in-view.fadeInUp.animation-running.visible
+    .panel-box
+      = image_tag('landing/projects.svg', width: 50, height: 50, class: "panel-box-ico")
+      %h3
+        Projects
+        %br/
+      .row
+        .col-md-6
+          .panel-inner
+            %p
+              Connect
+              %strong any popular analytics and remarketing platform
+              with your landing pages; track and optimize for the highest performance.
+%section.integrate.panel
+  .panel-container.animated.in-view.fadeInUp.animation-running.visible
+    .panel-box
+      = image_tag('landing/skill1.svg', width: 50, height: 50, class: "panel-box-ico")
+      %h3
+        Skills
+        %br/
+      .row
+        .col-md-6
+          .panel-inner
+            %p
+              Connect
+              %strong any popular analytics and remarketing platform
+              with your landing pages; track and optimize for the highest performance.
+%section.integrate.panel
+  .panel-container.animated.in-view.fadeInUp.animation-running.visible
+    .panel-box
+      = image_tag('landing/skills.svg', width: 50, height: 50, class: "panel-box-ico")
+      %h3
+        Experties
+        %br/
+      .row
+        .col-md-6
+          .panel-inner
+            %p
+              Connect
+              %strong any popular analytics and remarketing platform
+              with your landing pages; track and optimize for the highest performance.
+%section.integrate.panel
+  .panel-container.animated.in-view.fadeInUp.animation-running.visible
+    .panel-box
+      = image_tag('landing/education.svg', width: 50, height: 50, class: "panel-box-ico")
+      %h3
+        Education
+        %br/
+      .row
+        .col-md-6
+          .panel-inner
+            %p
+              Connect
+              %strong any popular analytics and remarketing platform
+              with your landing pages; track and optimize for the highest performance.
+%div
+  Icons made by
+  %a{:href => "http://www.freepik.com", :title => "Freepik"} Freepik
+  from
+  %a{:href => "http://www.flaticon.com", :title => "Flaticon"} www.flaticon.com
+  is licensed by
+  %a{:href => "http://creativecommons.org/licenses/by/3.0/", :target => "_blank", :title => "Creative Commons BY 3.0"} CC 3.0 BY

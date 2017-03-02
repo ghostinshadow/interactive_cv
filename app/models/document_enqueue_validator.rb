@@ -1,4 +1,5 @@
 class DocumentEnqueueValidator
+  attr_reader :feedback_filter
 	
   def initialize(opts = {})
     @feedback = opts.fetch(:feedback)
@@ -7,7 +8,7 @@ class DocumentEnqueueValidator
   end
 
   def task_valid_to_enqueue?
-    group_task_present_in_queue? && group_task_processing_now?
+    !task_present_in_queue? && !task_processing_now?
   end
   
   private
@@ -15,7 +16,7 @@ class DocumentEnqueueValidator
   def task_present_in_queue?
     samples = Resque.sample_queues[@queue_name][:samples]
     return false unless samples.any?
-    samples.select(&@feedback_filter).any?
+    samples.select(&feedback_filter).any?
   end
 
   def task_processing_now?

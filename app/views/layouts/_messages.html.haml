@@ -1,0 +1,10 @@
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    %div{:class => "alert alert-#{if name == :notice; "success" elsif name == :warning || name == 'warning'; "warning" else "danger" end}"}
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", type: "button"} ×
+      = content_tag :div, raw(msg), :id => "flash_#{name}"
+  -else
+    - msg.each do |attribute, messages|
+      %div{:class => "alert alert-danger"}
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", type: "button"} ×
+        = content_tag :div, raw(t("#{params[:controller]}.#{attribute.to_s}") + ': ' + messages.join(',')), :id => "flash_#{attribute}"

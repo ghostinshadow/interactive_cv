@@ -13,5 +13,7 @@
  *= require bootstrap_and_overrides
  *= require webix
  *= require layers
+ *= require landing
+ *= require half-slider
  *= require_self
  */

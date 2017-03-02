@@ -8,5 +8,36 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .container.col-xs-12.col-sm-10.col-sm-offset-1
-      .padding{:style=>"position:relative; padding: 25px;"}
-        = yield
+      .padding{:style=>"position:relative; padding: 0px 25px;"}
+        %nav.uniform_width.padding-bottom-one-relative
+          .container-fluid.white_background
+            .row
+              .col-md-2
+                = image_tag('landing/profile.svg', width: 200, height: 100, class: "panel-box-ico")
+              .col-md-4.text-center
+                %h3.navbar_h3= "OLEKSANDR KYCHUN"
+                %h4= "Ruby on Rails fullstack developer"
+              .col-md-2.col-md-offset-2.padding-top-two-and-half-relative
+                %div
+                  = image_tag('landing/linkedin.svg', width: 20, height: 20, class: "panel-box-ico")
+                  %h5.display_inline
+                    %a{"href" => "https://goo.gl/zXqh7P"}= "link"
+                %br
+                %div
+                  = image_tag('landing/skype.svg', width: 20, height: 20, class: "panel-box-ico")
+                  %h5{"class" => "display_inline"}= "ghostinshadow"
+            .row
+              .col-md-2.col-md-offset-1
+                = image_tag('landing/location.svg', width: 20, height: 20, class: "panel-box-ico")
+                %h5.display_inline= " Lviv, Ukraine"
+              .col-md-3
+                = image_tag('landing/phone.svg', width: 20, height: 20, class: "panel-box-ico")
+                %h5.display_inline= " +38 098 770 04 20"
+              .col-md-3
+                = image_tag('landing/email.svg', width: 20, height: 20, class: "panel-box-ico")
+                %h5.display_inline= " kichun.oleksandr@gmail.com"
+              .col-md-3
+                = image_tag('landing/web.svg', width: 20, height: 20, class: "panel-box-ico")
+                %h5.display_inline= " http://ghostinshadow.com"
+        .uniform_width
+          = yield
