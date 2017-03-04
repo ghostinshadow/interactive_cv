@@ -13,13 +13,11 @@ body {
 
 .carousel {
     height: 900px;
-    width: 1367px;
-    margin: auto;
+    width: 1170px;
 }
 
 .uniform_width{
-    width: 1367px;
-    margin: auto;  
+    width: 1170px;
 }
 .item,
 .active,
@@ -37,8 +35,4 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-
-footer {
-    margin: 50px 0;
 }

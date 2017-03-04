@@ -16,7 +16,7 @@
         %h2.mixed_background_img= "Proactive"
         = image_tag('landing/proactive.svg', width: 120, height: 120, class: "panel-box-ico")
     .item
-      .fill{:style => "background-image:url('#{image_url("landing/listener")}');"}
+      .fill{:style => "background-image:url('#{image_url("landing/team_player")}');"}
       .carousel-caption
         %h2.dark_background_img= "Team player"
         = image_tag('landing/collaboration.svg', width: 120, height: 120, class: "panel-box-ico")
@@ -25,67 +25,145 @@
     %span.icon-prev
   %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
     %span.icon-next
+.row
+  .col-md-5
+    %section.integrate.panel.panel_without_bottom_margin
+      .panel-container.animated.in-view.fadeInUp.animation-running.visible
+        .panel-box
+          = image_tag('landing/projects.svg', width: 50, height: 50, class: "panel-box-ico")
+          %h3
+            Projects
+            %br/
+          .row
+            .panel-inner
+              %h4= "Single page application"
+              %h5.technologies_desc= "Ruby on rails, mysql, angularjs"
+              %hr
+              %h4= "SaaS application"
+              %h5.technologies_desc= "Ruby on rails, mysql, resque"
+              %hr
+              %h4= "IoT infrastracture"
+              %h5.technologies_desc= "Ruby on rails, android, RioT OS"
+              %hr
+              %h4= "Single page application"
+              %h5.technologies_desc= "Node webkit, angularjs"
+              %hr
+              %h4= "Online 'Card game'"
+              %h5.technologies_desc= "Ruby on rails, mysql, angularjs"    
 
-%section.integrate.panel
-  .panel-container.animated.in-view.fadeInUp.animation-running.visible
-    .panel-box
-      = image_tag('landing/projects.svg', width: 50, height: 50, class: "panel-box-ico")
-      %h3
-        Projects
-        %br/
-      .row
-        .col-md-6
-          .panel-inner
-            %p
-              Connect
-              %strong any popular analytics and remarketing platform
-              with your landing pages; track and optimize for the highest performance.
-%section.integrate.panel
-  .panel-container.animated.in-view.fadeInUp.animation-running.visible
-    .panel-box
-      = image_tag('landing/skill1.svg', width: 50, height: 50, class: "panel-box-ico")
-      %h3
-        Skills
-        %br/
-      .row
-        .col-md-6
-          .panel-inner
-            %p
-              Connect
-              %strong any popular analytics and remarketing platform
-              with your landing pages; track and optimize for the highest performance.
-%section.integrate.panel
-  .panel-container.animated.in-view.fadeInUp.animation-running.visible
-    .panel-box
-      = image_tag('landing/skills.svg', width: 50, height: 50, class: "panel-box-ico")
-      %h3
-        Experties
-        %br/
-      .row
-        .col-md-6
-          .panel-inner
-            %p
-              Connect
-              %strong any popular analytics and remarketing platform
-              with your landing pages; track and optimize for the highest performance.
-%section.integrate.panel
-  .panel-container.animated.in-view.fadeInUp.animation-running.visible
-    .panel-box
-      = image_tag('landing/education.svg', width: 50, height: 50, class: "panel-box-ico")
-      %h3
-        Education
-        %br/
-      .row
-        .col-md-6
-          .panel-inner
-            %p
-              Connect
-              %strong any popular analytics and remarketing platform
-              with your landing pages; track and optimize for the highest performance.
-%div
-  Icons made by
-  %a{:href => "http://www.freepik.com", :title => "Freepik"} Freepik
-  from
-  %a{:href => "http://www.flaticon.com", :title => "Flaticon"} www.flaticon.com
-  is licensed by
-  %a{:href => "http://creativecommons.org/licenses/by/3.0/", :target => "_blank", :title => "Creative Commons BY 3.0"} CC 3.0 BY
+    %section.integrate.panel.panel_without_bottom_margin
+      .panel-container.animated.in-view.fadeInUp.animation-running.visible
+        .panel-box
+          = image_tag('landing/skill1.svg', width: 50, height: 50, class: "panel-box-ico")
+          %h3
+            Skills
+            %br/
+          .row
+            .panel-inner
+              %h4= "Ruby on Rails"
+              %hr
+              %h4= "Ruby"
+              %hr
+              %h4= "Mysql"
+              %hr
+              %h4= "Ubuntu"
+              %hr
+              %h4= "Angularjs"
+    %section.integrate.panel.panel_without_bottom_margin
+      .panel-container.animated.in-view.fadeInUp.animation-running.visible
+        .panel-box
+          = image_tag('landing/skills.svg', width: 50, height: 50, class: "panel-box-ico")
+          %h3
+            Experties
+            %br/
+          .row
+            .panel-inner
+              %h4= "Backend web development"
+              %hr
+              %h4= "DevOps"
+              %hr
+              %h4= "Rest Apis"
+              %hr
+              %h4= "Services Integration"
+    %section.integrate.panel.panel_without_bottom_margin
+      .panel-container.animated.in-view.fadeInUp.animation-running.visible
+        .panel-box
+          = image_tag('landing/education.svg', width: 50, height: 50, class: "panel-box-ico")
+          %h3
+            Education
+            %br/
+          .row
+            .panel-inner
+              %h4= "State University 'Lviv Polytechnics'"
+              %br
+              %h5.line-breaker="Master’s Degree, Computer and Information Systems Security/Information Assurance"
+              %h5.line-breaker="2015 - 2016"
+              %h5.line-breaker= "Grade: 91"
+              %hr
+              %h4= "State University 'Lviv Polytechnics'"
+              %br
+              %h5.line-breaker= "Bachelor’s Degree, Computer and Information Systems Security/Information Assurance"
+              %h5.line-breaker= "2010 - 2014"
+              %h5.line-breaker= "Grade: 82"
+  .col-md-7
+    %section.integrate.panel.panel_without_bottom_margin
+      .panel-container.animated.in-view.fadeInUp.animation-running.visible
+        .panel-box
+          = image_tag('landing/advanced.svg', width: 50, height: 50, class: "panel-box-ico")
+          %h3
+            Advanced
+            %br/
+        .panel-section
+          .row
+            .video_section
+              %h4="GIS On Rails"
+              %iframe{"class" => "line-breaker", "width" => "420", "height"=>"315", "src"=>"https://www.youtube.com/embed/kiylC87cnxs", "frameborder"=>"0" ,"allowfullscreen" => true}
+            .implementation_section
+              %h4="GIS integration"
+              = link_to "GIS", open_layers_path, class: 'btn btn-info line-breaker'
+            .implementation_section
+              %h4= "Background document generation"
+              = link_to "Documents", documents_path, class: 'btn btn-info line-breaker'
+  .col-md-7
+    %section.integrate.panel.panel_without_bottom_margin
+      .panel-container.animated.in-view.fadeInUp.animation-running.visible
+        .panel-box
+          = image_tag('landing/flask.svg', width: 50, height: 50, class: "panel-box-ico")
+          %h3
+            Experience
+            %br/
+        .panel-section
+          .row
+            .job_section
+              %h4="Ruby On Rails Developer(freelance)"
+              %h5.line-breaker.time="March 2017 - Present (1 month)"
+              %br
+              %h5.line-breaker= "Working on part time project, learning new skills, visiting meetups and doing presentations"
+            .job_section
+              %h4="Ruby On Rails Developer(freelance)"
+              %h5.line-breaker.time="February 2017 - February 2017 (1 month)"
+              %br
+              %h5.line-breaker="Update nodejs- angularjs single page application: replaced backend with ruby on rails application ; deployed on premises;"
+              %h5.line-breaker="Technologies: Ruby on rails, angularjs, postgresql"
+            .job_section
+              %h4="Full stack Ruby On Rails developer at uMuni"
+              %h5.line-breaker.time="April 2015 - January 2017 (1 year 10 months)"
+              %br
+              %h5.line-breaker="Technologies: Ruby on rails, mysql, resque, capistrano"
+            .job_section
+              %h4="Master Degree Project at Lviv Polytechnic National University"
+              %h5.line-breaker.time="April 2016 - June 2016 (3 months)"
+              %br
+              %h5.line-breaker="Complex Communication System based on IoT infrastructure"
+              %h5.line-breaker="Technologies: Ruby on rails, Riot os, Android"
+            .job_section
+              %h4="Single page application(freelance)"
+              %h5.line-breaker.time="February 2015 - March 2015 (2 months)"
+              %br
+              %h5.line-breaker="Full stack"
+              %h5.line-breaker="Technologies: Node-webkit, Angularjs, MongoDB"
+            .job_section
+              %h4="Trainee at SoftServe bootcamp"
+              %h5.line-breaker.time="October 2014 - January 2015 (4 months)"
+              %br
+              %h5.line-breaker="Testing Models(Rspec, Mocha); Writing Controllers in Front end; Managing Asynchronous requests"

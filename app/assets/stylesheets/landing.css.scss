@@ -410,7 +410,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font: normal normal normal 100%/1 Helvetica,Arial,sans-serif;
-    color: #373737
+    color: #373737;
+    background: asset-data-url("landing/backgrounds/backgr2");
 }
 
 h1,h2,h3,h4,h5,h6,p {
@@ -481,7 +482,7 @@ h2.dark_background_img{
 h3 {
     font-family: Roboto,Helvetica,Arial,sans-serif;
     font-weight: 300;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     line-height: 1.2;
     color: #00afec;
 }
@@ -504,7 +505,7 @@ h4 {
 h5 {
     font-family: Roboto,Helvetica,Arial,sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.2
 }
 
@@ -523,6 +524,10 @@ p {
     font-weight: 400
 }
 
+.footer p {
+    font-size: 14px;
+}
+
 strong {
     font-weight: 400
 }
@@ -537,18 +542,18 @@ strong {
     background-color: #fff
 }
 
-.panel:nth-child(odd) {
+.panel:nth-child(even) {
     background-color: #f5f5f5
 }
 
-.panel:nth-child(odd) .panel-box .panel-box-ico,.panel:nth-child(odd) .panel-point::before {
+.panel:nth-child(even) .panel-box .panel-box-ico,.panel:nth-child(even) .panel-point::before {
     background: #f5f5f5;
     box-shadow: 0 0 0 4px #f5f5f5
 }
 
 .panel .panel-container {
     position: relative;
-    padding: 10rem 1.5rem;
+    padding: 4rem 1.5rem;
     max-width: 1200px;
     box-sizing: border-box;
     margin: 0 auto
@@ -999,7 +1004,7 @@ section .container {
 section .btn {
     font-family: Roboto,Helvetica,Arial,sans-serif;
     font-weight: 400;
-    background: 0 0;
+    background-color: green;
     outline: 0;
     display: inline-block;
     border-radius: 2.5rem;
@@ -1727,4 +1732,59 @@ footer {
     padding: 0px 5px;
     margin-bottom: -1px;
     background-color: #fff;
+}
+.technologies_desc, .line-breaker{
+    text-indent: 10px;
+    margin-top: 5px;
+}
+.panel_without_bottom_margin{
+    margin-bottom: 0px
+}
+.with_decoration{
+  text-decoration: underline;
+}
+.panel-section{
+    position: relative;
+    padding-left: 7.5rem;
+}
+.job_section{
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    position: relative;
+    padding-left: 5rem;
+}
+
+.video_section, .implementation_section{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-left: 5rem;  
+}
+
+.job_section h5.time {
+    display: inline-block;
+    font-style: italic;
+}
+
+.job_section h4:before, .video_section h4:before, .implementation_section h4:before {
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: #fff;
+    border-radius: 16px;
+    left: -5px;
+    margin-top: 7px;
+    border: 2px solid #6BB5D0;
+}
+.footer {
+    bottom: 0;
+    height: 40px;
+    background-color: #f5f5f5;
+    display: block;
+}
+.container{
+    background-color: white;
+    padding-right: 0px;
+    padding-left: 0px;
 }

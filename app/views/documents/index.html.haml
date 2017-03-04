@@ -1,11 +1,10 @@
-%h1 Documents#index
-%p Find me in app/views/documents/index.html.haml
+%hr
 %h3
-  = t('building_documents.plural') 
+  = "Documents"
   = link_to "Add feedback", new_document_path, remote: true, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> #{t('building_documents.add')}"}, class: "btn btn-success pull-right"
 %br
 .flashes
-.row#building_documents_table
+.row#building_documents_table.without_margin
   - if @documents.any?
     %table.table.table-bordered.table-hover
       %thead

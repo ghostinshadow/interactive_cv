@@ -7,21 +7,21 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .container.col-xs-12.col-sm-10.col-sm-offset-1
-      .padding{:style=>"position:relative; padding: 0px 25px;"}
+    .row.col-xs-12.col-sm-10.col-sm-offset-1
+      .container
         %nav.uniform_width.padding-bottom-one-relative
           .container-fluid.white_background
             .row
-              .col-md-2
-                = image_tag('landing/profile.svg', width: 200, height: 100, class: "panel-box-ico")
-              .col-md-4.text-center
+              .col-md-offset-1.col-md-1.col-sm-2.col-xs-6
+                = image_tag('landing/profile.svg', width: 140, height: 80, class: "panel-box-ico")
+              .col-md-4.col-sm-5.col-xs-8.text-center
                 %h3.navbar_h3= "OLEKSANDR KYCHUN"
-                %h4= "Ruby on Rails fullstack developer"
-              .col-md-2.col-md-offset-2.padding-top-two-and-half-relative
+                %h4= "RAILS FULLSTACK DEVELOPER"
+              .col-md-2.col-md-offset-2.col-sm-5.col-sm-6.padding-top-two-and-half-relative
                 %div
                   = image_tag('landing/linkedin.svg', width: 20, height: 20, class: "panel-box-ico")
                   %h5.display_inline
-                    %a{"href" => "https://goo.gl/zXqh7P"}= "link"
+                    %a{"href" => "https://goo.gl/zXqh7P", "class" => "with_decoration"}= "profile"
                 %br
                 %div
                   = image_tag('landing/skype.svg', width: 20, height: 20, class: "panel-box-ico")
@@ -41,3 +41,13 @@
                 %h5.display_inline= " http://ghostinshadow.com"
         .uniform_width
           = yield
+        %footer.footer.uniform_width
+          %div
+            .row
+              %p{"style" => "margin-top: 5px; margin-left: 15px"}
+                Icons made by
+                %a{:href => "http://www.freepik.com", :title => "Freepik"} Freepik
+                from
+                %a{:href => "http://www.flaticon.com", :title => "Flaticon"} www.flaticon.com
+                is licensed by
+                %a{:href => "http://creativecommons.org/licenses/by/3.0/", :target => "_blank", :title => "Creative Commons BY 3.0"} CC 3.0 BY
