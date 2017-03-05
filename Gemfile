@@ -44,8 +44,15 @@ gem 'will_paginate', '~> 3.1.0'
 
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano', '> 3.1.0', require: false, group: :development
+gem 'capistrano-rvm'
+gem "capistrano-resque", "> 0.2.2", require: false
 
+
+group :development, :production do
+  gem 'capistrano-rails', '> 1.1.1', require: false
+  gem 'capistrano-bundler', '> 1.1.2', require: false
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
