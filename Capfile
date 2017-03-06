@@ -9,10 +9,8 @@ require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
 require 'capistrano/rvm'
-set :rvm_type, :user
-set :rvm_ruby_version, '2.3.0@interactive_cv'
-set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 
+require "capistrano/bundler"
 require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 
