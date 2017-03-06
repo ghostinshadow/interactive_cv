@@ -20,3 +20,5 @@
 //= require errors_hendler
 //= require highlight
 //= require controllers/open_layer
+//= require ol
+//= require LayersControl

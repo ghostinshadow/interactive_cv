@@ -10,8 +10,7 @@
 </style>
 <script type='text/javascript'>
   var data;
-  $.get("<%= open_layers_path %>" + ".json")
-    .done(function(response){data = JSON.parse(response)});
+
 
   function layer_existence_resolver(obj, common, value){
     if (value)
@@ -66,12 +65,12 @@
   ];
 
   webix.ready(function(){
+
     var table = webix.ui({
       view: "datatable",
       id: "datatable",
       container: "webix_table",
       autoheight: true,
-      data: data,
       columns: columns,
       fixedRowHeight:false,
       ready:function(){
@@ -81,6 +80,10 @@
         container: "open_layers_pagination",
         size: 10
       }
+    });
+    webix.ajax("<%= open_layers_path %>" + ".json",function (text,data){
+      console.log(text);
+       $$("datatable").parse(JSON.parse(text));
     });
   });
 </script>
