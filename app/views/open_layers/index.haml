@@ -2,7 +2,8 @@
 = stylesheet_link_tag "layers"
 .flashes
 %br
-%h3= t('open_layers.geo_info_system')
+%h3= t('open_layers.geo_information_system')
+%br
 .container-fluid.map-container
   .row
     .col-sm-12.col-md-12.nopadding
@@ -11,7 +12,7 @@
 = link_to t('open_layers.add_one'), new_open_layer_path, remote: true, class: 'btn btn-info pull-right'
 %br
 %h4
-  = t('open_layers.plural')
+  = "OpenLayers"
 %br
 #webix_table{style: 'width: 100%; height: 50%; margin: 20px 0;'}
 #open_layers_pagination

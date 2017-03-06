@@ -38,7 +38,8 @@
                 %h5.display_inline= " kichun.oleksandr@gmail.com"
               .col-md-3
                 = image_tag('landing/web.svg', width: 20, height: 20, class: "panel-box-ico")
-                %h5.display_inline= " http://ghostinshadow.com"
+                %h5.display_inline
+                  %a{"href" => "http://light-sparrow.com", "class" => "with_decoration"}= "HOME"
         .uniform_width
           = yield
         %footer.footer.uniform_width

@@ -5,18 +5,18 @@
     %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
   .carousel-inner
     .item.active
-      .fill{:style => "background-image:url('#{image_url("landing/face_small")}');"}
+      .fill.ideaman
       .carousel-caption
         %h2.light_backgroudn_img= "Problem solver"
         = image_tag('landing/idea.svg', width: 120, height: 120, class: "panel-box-ico")
 
     .item
-      .fill{:style => "background-image:url('#{image_url("landing/presentation")}');"}
+      .fill.proactive
       .carousel-caption
         %h2.mixed_background_img= "Proactive"
         = image_tag('landing/proactive.svg', width: 120, height: 120, class: "panel-box-ico")
     .item
-      .fill{:style => "background-image:url('#{image_url("landing/team_player")}');"}
+      .fill.teamplayer
       .carousel-caption
         %h2.dark_background_img= "Team player"
         = image_tag('landing/collaboration.svg', width: 120, height: 120, class: "panel-box-ico")
