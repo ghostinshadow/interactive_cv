@@ -20,7 +20,7 @@ set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 
 # Default value for :linked_files is []
 set :linked_files, %w{config/database.yml config/local_env.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 set :ssh_options, {:forward_agent => true, :keepalive => true}
 
