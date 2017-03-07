@@ -2,7 +2,10 @@
 = stylesheet_link_tag "layers"
 .flashes
 %br
-%h3= t('open_layers.geo_information_system')
+%h3
+  = "Geo Information System"
+%h4.col-md-offset-5
+  %a{"href" => "http://www.diva-gis.org/gdata", "class" => "with_decoration"}= "Gis data for test pupose"
 %br
 .container-fluid.map-container
   .row
